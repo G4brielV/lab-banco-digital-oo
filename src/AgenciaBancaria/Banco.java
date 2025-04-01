@@ -1,9 +1,18 @@
+package AgenciaBancaria;
+
+import AgenciaBancaria.Cliente.Cliente;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
 
 	private String nome;
-	private List<Conta> contas;
+	private final List<Conta> contas = new ArrayList<>();
+
+	protected void adicionarConta(Conta conta){
+		this.contas.add(conta);
+	}
 
 	public String getNome() {
 		return nome;
@@ -17,8 +26,5 @@ public class Banco {
 		return contas;
 	}
 
-	public void setContas(List<Conta> contas) {
-		this.contas = contas;
-	}
 
 }

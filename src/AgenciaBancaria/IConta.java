@@ -1,3 +1,4 @@
+package AgenciaBancaria;
 
 public interface IConta {
 	

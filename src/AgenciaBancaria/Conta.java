@@ -1,3 +1,6 @@
+package AgenciaBancaria;
+
+import AgenciaBancaria.Cliente.Cliente;
 
 public abstract class Conta implements IConta {
 	
@@ -9,26 +12,40 @@ public abstract class Conta implements IConta {
 	protected double saldo;
 	protected Cliente cliente;
 
-	public Conta(Cliente cliente) {
-		this.agencia = Conta.AGENCIA_PADRAO;
+	public Conta(Cliente cliente, double saldo, Banco banco, Integer agencia) {
+		this.agencia = agencia != null ? agencia : Conta.AGENCIA_PADRAO;
 		this.numero = SEQUENCIAL++;
 		this.cliente = cliente;
+		this.saldo = saldo;
+		banco.adicionarConta(this);
 	}
 
+
 	@Override
-	public void sacar(double valor) {
-		saldo -= valor;
+	public void sacar(double valor){
+		if(this.saldo < valor){
+			System.out.println("Saldo insuficiente.");
+		}
+		else {
+			this.saldo -= valor;
+		}
 	}
 
 	@Override
 	public void depositar(double valor) {
-		saldo += valor;
+		this.saldo += valor;
 	}
 
 	@Override
 	public void transferir(double valor, IConta contaDestino) {
-		this.sacar(valor);
-		contaDestino.depositar(valor);
+		if (valor <= this.saldo){
+			this.sacar(valor);
+			contaDestino.depositar(valor);
+		}
+		else{
+			System.out.println("Saldo insuficiente para transferência");
+		}
+
 	}
 
 	public int getAgencia() {
@@ -41,6 +58,15 @@ public abstract class Conta implements IConta {
 
 	public double getSaldo() {
 		return saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "{" +
+				"cliente=" + cliente +
+				", agencia=" + agencia +
+				", numero=" +  numero+
+				'}';
 	}
 
 	protected void imprimirInfosComuns() {

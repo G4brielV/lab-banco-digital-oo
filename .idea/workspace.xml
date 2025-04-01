@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48481ee1-16a0-475d-83a4-1b798793aae9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AgenciaBancaria/ContaPoupanca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgenciaBancaria/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgenciaBancaria/Cliente/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgenciaBancaria/Conta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgenciaBancaria/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContaPoupanca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IConta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AgenciaBancaria/IConta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="48481ee1-16a0-475d-83a4-1b798793aae9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

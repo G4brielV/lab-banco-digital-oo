@@ -1,18 +1,42 @@
-# Criando um AgenciaBancaria.Banco Digital com Java e Orientação a Objetos
+# 🏦 Banco & Contas - Melhoria de Funcionalidades em Java
 
-## 02/08/2021 - [Mentoria #1: Tire Suas Dúvidas Sobre Orientação a Objetos](https://www.youtube.com/watch?v=YS6ouOhkyNI)
+Este repositório contém aprimoramentos para o projeto original Banco Digital OO disponível em: https://github.com/falvojr/lab-banco-digital-oo
 
-Desafio: Considerando nosso conhecimento no domínio bancário, iremos abstrair uma solução Orientada a Objetos em Java. Para isso, vamos interpretar o seguinte cenário:
-“Um banco oferece aos seus clientes dois tipos de contas (corrente e poupança), as quais possuem as funcionalidades de depósito, saque e transferência (entre contas da própria instituição).”
+A seguir, foram adicionadas validações e novos recursos para tornar o sistema bancário mais robusto.
 
-### Abstração
-Habilidade de concentrar-se nos aspectos essenciais de um domínio, ignorando características menos importantes ou acidentais. Nesse contexto, objetos são abstrações de entidades existentes no domínio em questão.
+## 📄 Descrição do Projeto
 
-### Encapsulamento
-Encapsular significa esconder a implementação dos objetos, criando assim interfaces de uso mais concisas e fáceis de usar/entender. O encapsulamento favorece principalmente dois aspectos de um sistema: a manutenção e a evolução.
+A aplicação gerencia operações bancárias para contas correntes e poupanças, garantindo consistência por meio de validações e relacionamentos entre entidades.
 
-### Herança
-Permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de classe base. A classe que herda os membros da classe base é chamada de classe derivada.
+### Funcionalidades Implementadas
 
-### Polimorfismo
-Capacidade de um objeto poder ser referenciado de várias formas, ou seja, é capacidade de tratar objetos criados a partir das classes específicas como objetos de uma classe genérica. Cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele.
+1. **Verificação de Saldo**: Antes de realizar um saque ou transferência, o sistema confere se o valor requisitado não excede o saldo disponível.
+2. **Associação a Banco**: Ao criar uma nova conta, o usuário informa a agência e vincula a conta a uma instância de `Banco`.
+3. **Listagem de Contas**: O `Banco` mantém uma lista de todas as suas contas e fornece método para exibir detalhes de cada uma delas.
+
+---
+
+## 🗺️ Diagrama de Classes
+
+![Diagrama UML de Classes](https://github.com/user-attachments/assets/eaa3a9c3-03c3-4f54-a411-a852245db3da)
+
+
+> O diagrama mostra as interfaces e classes principais: `IConta`, `Conta`, `ContaCorrente`, `ContaPoupanca`, `Banco` e `Cliente`.
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+AgenciaBancaria/
+├── Cliente/
+│   └── Cliente.java
+├── Banco.java
+├── Conta.java
+├── ContaCorrente.java
+├── ContaPoupanca.java
+├── IConta.java       # Interface
+└── Main.java
+```
+
+---
